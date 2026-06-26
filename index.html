@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub Pages Smoke Test</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f5ef;
+        --ink: #1b1f23;
+        --muted: #59636e;
+        --line: #d8d2c4;
+        --accent: #0f7b6c;
+        --accent-dark: #095f53;
+        --paper: #fffdfa;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(15, 123, 108, 0.16), transparent 26rem),
+          linear-gradient(145deg, #fffdfa 0%, var(--bg) 58%, #ece7db 100%);
+      }
+
+      main {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        padding: 40px 20px;
+      }
+
+      .page {
+        width: min(960px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 250, 0.88);
+        box-shadow: 0 24px 70px rgba(31, 35, 40, 0.13);
+        overflow: hidden;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 32px;
+        align-items: center;
+        padding: 56px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(42px, 6vw, 76px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      a,
+      button {
+        border-radius: 8px;
+        border: 1px solid var(--accent);
+        padding: 12px 18px;
+        font: inherit;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      a.primary,
+      button {
+        color: #ffffff;
+        background: var(--accent);
+      }
+
+      a.secondary {
+        color: var(--accent-dark);
+        background: transparent;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        padding: 24px;
+      }
+
+      .stamp {
+        display: grid;
+        aspect-ratio: 1;
+        place-items: center;
+        border-radius: 8px;
+        background: #10231f;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .stamp strong {
+        display: block;
+        font-size: 52px;
+        line-height: 1;
+      }
+
+      .stamp span {
+        display: block;
+        margin-top: 8px;
+        color: #b9d8d2;
+        font-size: 14px;
+      }
+
+      .status {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.42);
+      }
+
+      .status div {
+        padding: 22px 28px;
+      }
+
+      .status div + div {
+        border-left: 1px solid var(--line);
+      }
+
+      .status b {
+        display: block;
+        font-size: 14px;
+      }
+
+      .status span {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 760px) {
+        .hero,
+        .status {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 34px 24px;
+        }
+
+        .status div + div {
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="page" aria-label="GitHub Pages test page">
+        <div class="hero">
+          <div>
+            <h1>GitHub 活跃测试页</h1>
+            <p>
+              这是一个用来验证 GitHub 提交和网页上线流程的小页面。只要你能看到这里，
+              就说明页面已经成功发布。
+            </p>
+            <div class="actions">
+              <a class="primary" href="https://github.com/a3weshgpmondqbry/ftqbzm">查看仓库</a>
+              <a class="secondary" href="#status">查看状态</a>
+            </div>
+          </div>
+          <div class="panel" aria-label="Publish status">
+            <div class="stamp">
+              <div>
+                <strong>OK</strong>
+                <span>Pages workflow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="status" id="status">
+          <div>
+            <b>提交</b>
+            <span>通过 GitHub 插件写入仓库，生成真实提交记录。</span>
+          </div>
+          <div>
+            <b>发布</b>
+            <span>使用 GitHub Pages 自动发布静态网页。</span>
+          </div>
+          <div>
+            <b>验证</b>
+            <span>本地和线上都会检查页面能否正常打开。</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
