@@ -1,0 +1,3 @@
+Vercel Git integration check
+Created by Codex on 2026-06-26.
+This file verifies that a GitHub commit triggers a Vercel deployment for the ftqbzm project.
